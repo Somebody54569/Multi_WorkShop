@@ -6,13 +6,13 @@ using UnityEngine;
 public class HostSingleton : MonoBehaviour
 {
     private static HostSingleton instance;
-    private HostGameManger gameManager;
+    public HostGameManger GameManager { get; private set; }
 
     public static HostSingleton Instance
     {
         get
         {
-            if (instance == null) { return instance; }
+            if (instance != null) { return instance; }
             instance = FindFirstObjectByType<HostSingleton>();
 
             if (instance == null)
@@ -30,8 +30,8 @@ public class HostSingleton : MonoBehaviour
     }
 
     // Update is called once per frame
-    public async Task CreateHost()
+    public void CreateHost()
     {
-        gameManager = new HostGameManger();
+        GameManager = new HostGameManger();
     }
 }

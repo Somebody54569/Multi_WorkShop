@@ -195,7 +195,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ferdig-seamless-dirt2_0: -6863560088489299119
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
