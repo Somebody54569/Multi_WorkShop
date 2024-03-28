@@ -71,6 +71,11 @@ public class ClientGameManger : IDisposable
         NetworkManager.Singleton.StartClient();
     }
 
+    public void Disconnect()
+    {
+        networkClient.Disconnect();
+    }
+
     public void Dispose()
     {
         networkClient?.Dispose();
